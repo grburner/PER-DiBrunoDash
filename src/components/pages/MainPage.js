@@ -18,7 +18,7 @@ const MainPage = (props) => {
         range1s: '', 
         range1e: '', 
         range2s: '',
-        range2e: ''
+        range2e: '',
     });
 
     const handleDateSelection = dateArr => {
@@ -26,15 +26,16 @@ const MainPage = (props) => {
             range1s: mtd(dateArr[0]),
             range1e: mtd(dateArr[1]),
             range2s: mtd(dateArr[2]),
-            range2e: mtd(dateArr[3])
+            range2e: mtd(dateArr[3]),
         })
     }
 
-    useEffect((dates) => {
+    useEffect(() => {
+        console.log(dates)
         if (!dates) return 
         let querySet = dateToQuery(dates)
         setQuery({query: querySet})
-    })
+    },[dates])
 
     return (
         <Container>
