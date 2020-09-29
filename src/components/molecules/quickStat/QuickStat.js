@@ -8,17 +8,19 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
 const QuickStat = (props) => {
-    const { days } = props
+    const { days, first, second, delta } = props
 
     return (
         <div>
             <Row>
                 <Col>
-                    <Heading3 variant="secondary" type="$" days={ days }>$515.51</Heading3>
-                    <Heading4 type="%" days={ days }>{`Last ${days} days`}</Heading4>
+                    <Heading3 variant="secondary" >${ first }</Heading3>
+                    <Heading4 days={ days }>{`Last ${ days } days`}</Heading4>
+                    <Heading3 variant="secondary" >${ second }</Heading3>
+                    <Heading4 days={ days }>{`Last ${ days + 1 } thru ${ days * 2} days ago`}</Heading4>
                 </Col>
                 <Col>
-                    <Heading2>15%</Heading2>
+                    <Heading2>{ delta }%</Heading2>
                 </Col>
             </Row>
         </div>
