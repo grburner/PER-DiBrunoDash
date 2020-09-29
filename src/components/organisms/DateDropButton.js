@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Dropdown from 'react-bootstrap/Dropdown'
 
 const DateDropButton = (props) => {
-    const {children, onClick, variant, size, handleDateSelection} = props
+    const {children, onClick, variant, size, handler} = props
 
     function setDate(date, e) {
         let dt = new Date()
@@ -11,7 +11,7 @@ const DateDropButton = (props) => {
         let range1end = dt.setDate( dt.getDate() - date) // date days ago
         let range2start = dt.setDate( dt.getDate() - 1 ) // date + 1 days ago
         let range2end = dt.setDate( dt.getDate() - date) // date + 1 + date days ago
-        handleDateSelection([range1start, range1end, range2start, range2end])
+        handler([range1start, range1end, range2start, range2end])
     }
 
     return (
