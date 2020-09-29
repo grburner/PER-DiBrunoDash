@@ -8,9 +8,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Container from 'react-bootstrap/Container';
 
-// import Title from './components/atoms/texts/Heading1';
-// import QuickStat from './components/molecules/quickStat/QuickStat';
-// import QuickStatPanel from './components/organisms/quickStatPanel/QuickStatPanel';
 import QuickStatTemplate from '../templates/QuickStatTemplate';
 import NavBarTemplate from '../templates/NavBarTemplate';
 import DatePickerBar from '../templates/DatePickerBar';
@@ -43,7 +40,7 @@ const MainPage = (props) => {
         <Container>
             <NavBarTemplate></NavBarTemplate>
             <DatePickerBar handler={ handleDateSelection } dates={ dates }></DatePickerBar>
-            <QuickStatTemplate dates={ dates }></QuickStatTemplate>
+            <QuickStatTemplate query={ query }></QuickStatTemplate>
         </Container>
     )
 };

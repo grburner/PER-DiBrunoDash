@@ -6,7 +6,7 @@ import QuickStatPanel from '../../components/organisms/QuickStatPanel';
 import CardDeck from 'react-bootstrap/CardDeck';
 
 
-const QuickStatTemplate = ({dates}) => {
+const QuickStatTemplate = ({query}) => {
     const [hasError, setErrors] = useState(false);
     const [stats, setStats] = useState({ 
         days: '', 
@@ -23,7 +23,9 @@ const QuickStatTemplate = ({dates}) => {
 
     useEffect(() => {
         async function fetchData() {
-            const res = await fetch("https://0344163c-1856-4b60-9557-754eb3d44d71.mock.pstmn.io/quickstat");
+            // const res = await fetch(query);
+            // use this ^^^ when database is live - use below for dummy data
+            const res = await fetch("https://0344163c-1856-4b60-9557-754eb3d44d71.mock.pstmn.io/quickstat")
             let data
             res
                 .json()
