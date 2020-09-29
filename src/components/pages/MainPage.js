@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import mtd from '../../utilities/functions/miliToDate';
+import dateToQuery from '../../utilities/functions/dateQueryString'
 
 import "react-datepicker/dist/react-datepicker.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -15,7 +16,7 @@ import NavBarTemplate from '../templates/NavBarTemplate';
 import DatePickerBar from '../templates/DatePickerBar';
 
 const MainPage = (props) => {
-
+    const [query, setQuery] = useState({});
     const [dates, setDates] = useState({ 
         range1s: '', 
         range1e: '', 
@@ -32,15 +33,17 @@ const MainPage = (props) => {
         })
     }
 
-    const confirmClick= () => {
-        console.log("Clicked!")
-    }
+    useEffect((dates) => {
+        if (!dates) return 
+        let querySet = dateToQuery(dates)
+        setQuery({query: querySet})
+    })
 
     return (
         <Container>
             <NavBarTemplate></NavBarTemplate>
             <DatePickerBar handler={ handleDateSelection } dates={ dates }></DatePickerBar>
-            <QuickStatTemplate></QuickStatTemplate>
+            <QuickStatTemplate dates={ dates }></QuickStatTemplate>
         </Container>
     )
 };

@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
+import dateToQuery from '../../utilities/functions/dateQueryString';
+
 import QuickStatPanel from '../../components/organisms/QuickStatPanel';
 import CardDeck from 'react-bootstrap/CardDeck';
 
-const QuickStatTemplate = () => {
+
+const QuickStatTemplate = ({dates}) => {
     const [hasError, setErrors] = useState(false);
     const [stats, setStats] = useState({ 
         days: '', 
@@ -49,6 +52,7 @@ const QuickStatTemplate = () => {
                 <QuickStatPanel header={ "Sales" } days={ stats.days } first={stats.sales1} second={stats.sales2} delta={stats.salesd}></QuickStatPanel>
                 <QuickStatPanel header={ "Margin" } days={ stats.days } first={stats.margin1} second={stats.margin2} delta={stats.margind}></QuickStatPanel>
                 <QuickStatPanel header={ "Avg Ring" } days={ stats.days } first={stats.aring1} second={stats.aring2} delta={stats.aringd}></QuickStatPanel>
+                {/* <ClickButton onClick={dateToQuery(dates)}>ClickMe</ClickButton> */}
             </CardDeck>
         </div>
     )
