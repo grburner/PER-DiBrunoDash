@@ -4,10 +4,13 @@ import mtd from '../../utilities/functions/miliToDate';
 
 import DateDropButton from '../organisms/DateDropButton';
 import DateRangeButton from '../atoms/button/DateRangeButton';
+import ClickButton from '../atoms/button/ClickButton'
 
 import Navbar from 'react-bootstrap/Navbar';
 
 const DatePickerBar = (props) => {
+    
+
     const [dates, setDates] = useState({ 
         range1s: '', 
         range1e: '', 
@@ -24,6 +27,10 @@ const DatePickerBar = (props) => {
         })
     }
 
+    const confirmClick= () => {
+        console.log("Clicked!")
+    }
+
 
     return (
         <div>
@@ -31,6 +38,7 @@ const DatePickerBar = (props) => {
                 <DateDropButton handleDateSelection= { handleDateSelection }>Date Range</DateDropButton>
                 <DateRangeButton range1={ dates.range1s } range2={ dates.range1e }></DateRangeButton>
                 <DateRangeButton range1={ dates.range2s } range2= { dates.range2e }></DateRangeButton>
+                <ClickButton onClick={ confirmClick }>Go!</ClickButton>
             </Navbar>
         </div>
     )

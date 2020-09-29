@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 
-import Button from 'react-bootstrap/Button'
-import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
-
-import miliToDate from '../../utilities/functions/miliToDate';
 
 const DateDropButton = (props) => {
     const {children, onClick, variant, size, handleDateSelection} = props
