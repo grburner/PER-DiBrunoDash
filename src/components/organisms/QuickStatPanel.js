@@ -1,6 +1,6 @@
 import React from 'react';
 
-import QuickStat from '../../molecules/quickStat/QuickStat';
+import QuickStat from '../../components/molecules/quickStat/QuickStat';
 import Card from 'react-bootstrap/Card'
 
 const QuickStatPanel = (props) => {

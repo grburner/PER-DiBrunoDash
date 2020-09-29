@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import QuickStatPanel from '../../components/organisms/quickStatPanel/QuickStatPanel';
+import QuickStatPanel from '../../components/organisms/QuickStatPanel';
 import CardDeck from 'react-bootstrap/CardDeck';
 
 const QuickStatTemplate = () => {
