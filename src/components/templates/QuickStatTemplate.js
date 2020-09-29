@@ -45,7 +45,7 @@ const QuickStatTemplate = () => {
 
     return (
         <div>
-            <CardDeck border="light">
+            <CardDeck className="mt-3" border="light">
                 <QuickStatPanel header={ "Sales" } days={ stats.days } first={stats.sales1} second={stats.sales2} delta={stats.salesd}></QuickStatPanel>
                 <QuickStatPanel header={ "Margin" } days={ stats.days } first={stats.margin1} second={stats.margin2} delta={stats.margind}></QuickStatPanel>
                 <QuickStatPanel header={ "Avg Ring" } days={ stats.days } first={stats.aring1} second={stats.aring2} delta={stats.aringd}></QuickStatPanel>
