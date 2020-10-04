@@ -8,10 +8,10 @@ import Container from 'react-bootstrap/Container';
 import QuickStatTemplate from '../templates/QuickStatTemplate';
 import NavBarTemplate from '../templates/NavBarTemplate';
 import DatePickerBar from '../templates/DatePickerBar';
-import SalesChart from '../templates/SalesChart';
-import GoalsChart from '../templates/GoalsChart';
-import MarginChart from '../templates/MarginContChart';
-import FastSlow from '../templates/FastSlowChart';
+import SalesChart from '../organisms/charts/SalesChart';
+import GoalsChart from '../organisms/charts/GoalsChart';
+import MarginChart from '../organisms/charts/MarginContChart';
+import FastSlow from '../organisms/charts/FastSlowChart';
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 
