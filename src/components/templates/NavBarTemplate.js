@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import MenuDropDown from '../atoms/button/MenuDropDown';
-import ClickButton from '../atoms/button/ClickButton';
 
 import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';

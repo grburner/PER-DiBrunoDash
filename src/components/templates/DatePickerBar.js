@@ -1,27 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import dateToQuery from '../../utilities/functions/dateQueryString';
-
+import React, { useContext }from 'react';
+import QueryContext from '../../utilities/context/QueryContext';
+import ClickButton from '../atoms/button/ClickButton'
 import DateDropButton from '../organisms/DateDropButton';
 import DateRangeButton from '../atoms/button/DateRangeButton';
-import ClickButton from '../atoms/button/ClickButton'
 
 import Navbar from 'react-bootstrap/Navbar';
 
-const DatePickerBar = ({ handler, dates }) => {
-    const [query, setQuery] = useState({});
-
-    const setQueryState = (dates) => {
-        let querySet = dateToQuery(dates)
-        setQuery({query: querySet})
-    }
+const DatePickerBar = () => {
+    const queryctx = useContext(QueryContext)
 
     return (
         <div>
             <Navbar bg="light">
-                <DateDropButton handler= { handler }>Date Range</DateDropButton>
-                <DateRangeButton range1={ dates.range1s } range2={ dates.range1e }></DateRangeButton>
-                <DateRangeButton range1={ dates.range2s } range2={ dates.range2e }></DateRangeButton>
-                <ClickButton onClick={() => setQueryState(dates)}>Go!</ClickButton>
+                <DateDropButton>Date Range</DateDropButton>
+                <DateRangeButton first={queryctx.firstStart} second={queryctx.firstEnd}></DateRangeButton>
+                <DateRangeButton first={queryctx.secondStart} second={queryctx.secondEnd}></DateRangeButton>
+                <ClickButton>Go!</ClickButton>
             </Navbar>
         </div>
     )

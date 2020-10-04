@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-import dateToQuery from '../../utilities/functions/dateQueryString';
-
 import QuickStatPanel from '../../components/organisms/QuickStatPanel';
 import CardDeck from 'react-bootstrap/CardDeck';
 
