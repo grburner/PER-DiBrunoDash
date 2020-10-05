@@ -16,28 +16,38 @@ const App = () => {
     secondStart: 'third',
     secondEnd: 'fourth',
     selectedStore: 'Select Store',
+    displayDate: 'Select Date',
     onClick: (period) => {
       changeDates(period)
     },
     onStoreChange: (store) => {
-      console.log('into change store function')
-      setQueryState({
-        ...queryState,
-        selectedStore: store
+      setQueryState(prevQuery => {
+        return {
+          ...prevQuery,
+          selectedStore: store
+        }
+      })
+    },
+    onDateChange: (dateRange) => {
+      setQueryState(prevQuery => {
+        return {
+          ...prevQuery,
+          displayDate: dateRange
+        }
       })
     }
   })
 
   const changeDates = (period) => {
-    console.log(period)
     const dateArray = setQueryDate(period)
-    console.log(dateArray)
-    setQueryState({
-      ...queryState,
-      firstStart: dateArray[0],
-      firstEnd: dateArray[1],
-      secondStart: dateArray[2],
-      secondEnd: dateArray[3]
+    setQueryState(prevQuery => {
+      return {
+        ...prevQuery,
+        firstStart: dateArray[0],
+        firstEnd: dateArray[1],
+        secondStart: dateArray[2],
+        secondEnd: dateArray[3]
+      }
     })
   }
 

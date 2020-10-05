@@ -20,7 +20,6 @@ const MainPage = () => {
     return (
         <Container>
             <NavBarTemplate />
-            <DatePickerBar />
             <QuickStatTemplate />
             <Row>
                 <Col>

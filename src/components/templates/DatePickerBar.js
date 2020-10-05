@@ -15,7 +15,6 @@ const DatePickerBar = () => {
                 <DateDropButton>Date Range</DateDropButton>
                 <DateRangeButton first={queryctx.firstStart} second={queryctx.firstEnd}></DateRangeButton>
                 <DateRangeButton first={queryctx.secondStart} second={queryctx.secondEnd}></DateRangeButton>
-                <ClickButton>Go!</ClickButton>
             </Navbar>
         </div>
     )
