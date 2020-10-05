@@ -15,8 +15,16 @@ const App = () => {
     firstEnd: 'second',
     secondStart: 'third',
     secondEnd: 'fourth',
+    selectedStore: 'Select Store',
     onClick: (period) => {
       changeDates(period)
+    },
+    onStoreChange: (store) => {
+      console.log('into change store function')
+      setQueryState({
+        ...queryState,
+        selectedStore: store
+      })
     }
   })
 

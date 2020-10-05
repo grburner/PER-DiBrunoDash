@@ -5,7 +5,9 @@ const QueryContext = React.createContext({
     firstEnd: '',
     secondStart: '',
     secondEnd: '',
-    onClick: () => undefined
+    selectedStore: '',
+    onClick: () => undefined,
+    onStoreChange: () => undefined
 });
 
 export default QueryContext;

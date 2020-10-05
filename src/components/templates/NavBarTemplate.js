@@ -1,9 +1,9 @@
 import React from 'react';
 
 import MenuDropDown from '../atoms/button/MenuDropDown';
+import DropDownButton from '../atoms/button/DropDownButton'
 
 import Navbar from 'react-bootstrap/Navbar';
-import Button from 'react-bootstrap/Button';
 
 const NavBarTemplate = () => {
 
@@ -12,7 +12,9 @@ const NavBarTemplate = () => {
             <Navbar bg="dark" variant="dark">
                 <MenuDropDown />
                 <Navbar.Brand className="ml-3" href="#home">BottleShop Dash</Navbar.Brand>
-                <Button className="justify-content-end" variant="light">User Name</Button>
+                <Navbar.Collapse className="justify-content-end">
+                    <DropDownButton></DropDownButton>
+                </Navbar.Collapse>
             </Navbar>
         </div>
     )
