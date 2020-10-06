@@ -12,7 +12,7 @@ import SalesChart from '../organisms/charts/SalesChart';
 import GoalsChart from '../organisms/charts/GoalsChart';
 import MarginChart from '../organisms/charts/MarginContChart';
 import FastSlow from '../organisms/charts/FastSlowChart';
-import ProductTable from '../organisms/tables/ProductTable';
+import ProductTable from '../organisms/tables/productTable/ProductTable';
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 
