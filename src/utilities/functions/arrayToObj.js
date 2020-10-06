@@ -13,7 +13,8 @@ const arrToObj = arr => {
             production: row[9]
         }
     })
-    return retObj
+    console.log({products: retObj})
+    return {products: retObj}
 };
 
 export default arrToObj;
