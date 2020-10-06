@@ -12,6 +12,7 @@ import SalesChart from '../organisms/charts/SalesChart';
 import GoalsChart from '../organisms/charts/GoalsChart';
 import MarginChart from '../organisms/charts/MarginContChart';
 import FastSlow from '../organisms/charts/FastSlowChart';
+import ProductTable from '../organisms/tables/ProductTable';
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 
@@ -23,11 +24,11 @@ const MainPage = () => {
             <QuickStatTemplate />
             <Row>
                 <Col>
-                    <SalesChart />
+                    <ProductTable />
                 </Col>
-                <Col>
+                {/* <Col>
                     <GoalsChart />
-                </Col>
+                </Col> */}
             </Row>
             <Row>
                 <Col>
