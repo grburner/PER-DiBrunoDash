@@ -4,7 +4,7 @@ const Heading2 = (props) => {
     const { children } = props
 
     return (
-        <h2>{children}</h2>
+        <h2 className="align-baseline">{children}</h2>
     )
 }
 

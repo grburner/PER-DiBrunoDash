@@ -4,7 +4,7 @@ const Heading3 = (props) => {
     const {children } = props
 
     return (
-        <h3>{children}</h3>
+        <h3 className="pt-2">{children}</h3>
     )
 }
 

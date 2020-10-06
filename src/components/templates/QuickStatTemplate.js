@@ -3,6 +3,9 @@ import React, { useEffect, useState, useContext } from 'react';
 import QuickStatPanel from '../../components/organisms/QuickStatPanel';
 import CardDeck from 'react-bootstrap/CardDeck';
 import QueryContext from '../../utilities/context/QueryContext';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container'
 
 
 const QuickStatTemplate = () => {
@@ -50,13 +53,31 @@ const QuickStatTemplate = () => {
     }, []);
 
     return (
-        <div>
-            <CardDeck className="mt-3" border="light">
-                <QuickStatPanel header={ "Sales" } days={ stats.days } first={stats.sales1} second={stats.sales2} delta={stats.salesd}></QuickStatPanel>
-                <QuickStatPanel header={ "Margin" } days={ stats.days } first={stats.margin1} second={stats.margin2} delta={stats.margind}></QuickStatPanel>
-                <QuickStatPanel header={ "Avg Ring" } days={ stats.days } first={stats.aring1} second={stats.aring2} delta={stats.aringd}></QuickStatPanel>
-            </CardDeck>
-        </div>
+        <Container>
+            <Row>
+                <Col>
+                    <Row>
+                        <h4 className="px-3 pb-0 mb-0 pt-3 font-italic">QUICK STATS</h4>
+                    </Row>
+                    <Row className="border-bottom">
+                        <p className="pl-3 my-0 font-italic text-muted">{`Last ${stats.days} days compared to previous ${stats.days} days`}</p>
+                    </Row>
+                </Col>
+            </Row>
+            <Row className="m-0">
+                <CardDeck className="mt-3 w-100" border="light">
+                    <Col className="p-0">
+                        <QuickStatPanel header={ "SALES" } days={ stats.days } first={stats.sales1} second={stats.sales2} delta={stats.salesd}></QuickStatPanel>
+                    </Col>
+                    <Col className="p-0">
+                        <QuickStatPanel header={ "MARGIN" } days={ stats.days } first={stats.margin1} second={stats.margin2} delta={stats.margind}></QuickStatPanel>
+                    </Col>
+                    <Col className="p-0">
+                        <QuickStatPanel header={ "AVG RING" } days={ stats.days } first={stats.aring1} second={stats.aring2} delta={stats.aringd}></QuickStatPanel>
+                    </Col>
+                </CardDeck>
+            </Row>
+        </Container>
     )
 }
 
