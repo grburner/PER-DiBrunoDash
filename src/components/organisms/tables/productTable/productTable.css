@@ -6,3 +6,26 @@
 .table-wrapper-scroll-y {
     display: block;
     }
+
+th {
+    text-align: left;
+    width: 200px;
+    border-bottom: 2px solid black;
+  }
+
+td {
+    height: 25px;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+table {
+    table-layout: fixed;
+    text-align: "left"
+}
+
+.table td {
+    text-align: left;
+}

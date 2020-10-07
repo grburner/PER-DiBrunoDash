@@ -1,5 +1,5 @@
 ﻿const dummyData = [
-    // ["product_name","units_sold","revenue","unit_cost","price","vendor","country","type","style","production"],
+    ["product_name","units_sold","revenue","unit_cost","price","vendor","country","type","style","production"],
     ["LOURENS WHITE BLEND",7,244.93,18.59,34.99,"VINESTREET","ZA","white","still","traditional"],
     ["STORM POINT CHENIN BLANC",16,319.84,9.49,19.99,"VINESTREET","ZA","white","still","natural"],
     ["WEST & WILDER CHENIN BLANC CAN",14,126,4.59,9,"VINESTREET","US","white","still","traditional"],
