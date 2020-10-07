@@ -17,6 +17,7 @@ import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 
 const MainPage = () => {
+    
 
     return (
         <Container>
@@ -32,7 +33,7 @@ const MainPage = () => {
             </Row>
             <Row>
                 <Col>
-                    <MarginChart />
+                    <MarginChart/>
                 </Col>
                 <Col>
                     <FastSlow />

@@ -12,8 +12,7 @@ const arrToObj = arr => {
             style: row[8],
             production: row[9]
         }
-    })
-    console.log({products: retObj})
+    });
     return {products: retObj}
 };
 

@@ -1,16 +1,15 @@
 import React from 'react';
 
-import Badge from 'react-bootstrap/Badge'
-
+import Badge from 'react-bootstrap/Badge';
 
 const PillButton = (props) => {
-    const { children, color } = props
+  const { children, color } = props;
 
-    return (
-        <Badge pill variant={color}>
-            {children}
-        </Badge>
-    )
-}
+  return (
+    <Badge pill variant={color}>
+      {children}
+    </Badge>
+  );
+};
 
 export default PillButton;
